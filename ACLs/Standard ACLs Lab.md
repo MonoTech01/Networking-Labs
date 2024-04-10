@@ -1,5 +1,5 @@
 # Topology
-![ACLs](/Images/ACL3.png)
+![ACLs](/Images/ACL0.png)
 
 VLAN 10's network address: 10.16.0.0/24
 
