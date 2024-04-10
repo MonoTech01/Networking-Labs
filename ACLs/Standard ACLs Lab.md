@@ -18,9 +18,6 @@ PC10's IP address is 10.16.0.10, and the default gateway is 10.16.0.1.
 Router R1's interface g0/0 IP address is 10.16.6.5, and no access list was configured.
 ![ACLs](/Images/ACL2.png)
 
-## Change router R1 name from R1-AZ to R1-ML
-![ACLs](/Images/ACL1.png)
-
 ## Create an access list
 ### Deny
 ![ACLs](/Images/ACL4.png)
