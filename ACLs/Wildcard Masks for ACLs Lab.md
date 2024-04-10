@@ -1,12 +1,12 @@
+# Objective
+Block all traffic from the network address 10.16.0.0/24 on R1.
+
 # Topology
 ![ACLs](/Images/ACL00.png)
 
 VLAN 10's network address: 10.16.0.0/24
 
 Note: I've used Packet Tracer to replicate the necessary parts of the original network for this task.
-
-# Objective
-Block all traffic from the network address 10.16.0.0/24 on R1.
 ## Note 
 This lab uses the same network setup as the "Standard ACLs Lab". I'll repeat some of the steps, providing a summarized version below. Please check "Standard ACLs Lab" as needed. 
 ### The similar steps
