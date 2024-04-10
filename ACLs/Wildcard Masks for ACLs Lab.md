@@ -16,7 +16,7 @@ Change router R1 name from R1-AZ to R1-ML
 ![ACL](/Images/ACL15.png)
 
 ## Tip
-If you configure an ACL but do not see any logs or expected results, you might forgot to apply it on a router's int.
+If you configure an ACL but do not see any logs or expected results, you might forget to apply it on a router's int.
 
 
  
