@@ -36,6 +36,7 @@ The inbound access list is 1 now!
 ## Test
 The result was expected. The traffic went from PC10 to R1 and was block at R1's int g0/0.
 ![ACLs](/Images/ACL11.png)
+
 The access-list 1 on R1 showed how many IP addresses matched for deny rule and permit rule.
 ![ACLs](/Images/ACL10.png)
 
