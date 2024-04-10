@@ -5,6 +5,8 @@ VLAN 10's network address: 10.16.0.0/24
 
 PC10's IP address: 10.16.0.10
 
+Router R1's IP address: 192.168.1.100
+
 # Objective
 Block all traffic from the source IP address 10.16.0.10 on router R1.
 
