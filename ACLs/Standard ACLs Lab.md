@@ -5,7 +5,9 @@ VLAN 10's network address: 10.16.0.0/24
 
 PC10's IP address: 10.16.0.10
 
-Router R1's IP address: 192.168.1.100
+PC10's default gateway: 10.16.0.1
+
+Router R1's interface g0/0 IP address: 10.16.6.5
 
 # Objective
 Block all traffic from the source IP address 10.16.0.10 on router R1.
@@ -16,3 +18,6 @@ Block all traffic from the source IP address 10.16.0.10 on router R1.
 
 ## Create an access list
 ![ACLs](/Images/ACL4.png)
+
+## 
+
