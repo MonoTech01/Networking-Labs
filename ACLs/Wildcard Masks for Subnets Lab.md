@@ -23,8 +23,25 @@ The first usable address is 10.16.0.1
 
 # Assess the network
 Similar to the other ACL labs, I checked that there was no ACL configuration on R1.
+![ACL](/Images/ACL18.png)
+![ACL](/Images/ACL19.png)
+![ACL](/Images/ACL19a.png)
+![ACL](/Images/ACL20.png)
+![ACL](/Images/ACL20a.png)
 
-# Create an ACL
+# Create an ACL on R1
+![ACL](/Images/ACL21.png)
+
+# Apply the ACL on R1's int g0/0
+Because I blocked many networks including vlan 10, vlan 20, vlan 30, vlan 40, I am "destroying" the routing protocol :imp:.
+![ACL](/Images/ACL22.png)
+
+# Expected Result
+They've been blacklisted and they're feeling blue...bye /21!!!
+![ACL](/Images/ACL23.png)
+
+
+
 
 
 
