@@ -23,9 +23,12 @@ The first usable address is 10.16.0.1
 
 # Assess the network
 Similar to the other ACL labs, I checked that there was no ACL configuration on R1.
+## Access Switch 1
 ![ACL](/Images/ACL18.png)
+## Core Switch 1
 ![ACL](/Images/ACL19.png)
 ![ACL](/Images/ACL19a.png)
+## Core Switch 2
 ![ACL](/Images/ACL20.png)
 ![ACL](/Images/ACL20a.png)
 
