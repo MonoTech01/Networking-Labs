@@ -18,4 +18,15 @@ The last usable address is 10.16.7.254
 
 The first usable address is 10.16.0.1
 
+# What to expect before creating an ACL on R1?
+![ACL](/Images/ACL13.png)
+
+# Assess the network
+Similar to the other ACL labs, I checked that there was no ACL configuration on R1.
+
+# Create an ACL
+
+
+
+
 
