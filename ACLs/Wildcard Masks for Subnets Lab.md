@@ -37,7 +37,9 @@ Because I blocked many networks including vlan 10, vlan 20, vlan 30, vlan 40, I 
 ![ACL](/Images/ACL22.png)
 
 # Expected Result
+
 They've been blacklisted and they're feeling blue...bye /21!!!
+
 ![ACL](/Images/ACL23.png)
 
 
