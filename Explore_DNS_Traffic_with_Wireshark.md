@@ -7,10 +7,10 @@
 ## Assess the PC
 ![DNS](/Images/DNS5.png)
 
-## Capturing Ethernet0
+## Capture Ethernet0
 ![DNS](/Images/DNS6.png)
 
-## Filtering UDP port
+## Filter UDP port
 ![DNS](/Images/DNS7.png)
 
 ![DNS](/Images/.png)
