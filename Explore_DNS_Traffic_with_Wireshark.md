@@ -7,6 +7,9 @@
 ## Assess the PC
 ![DNS](/Images/DNS5.png)
 
+## Capturing Ethernet0
+![DNS](/Images/DNS6.png)
+
 
 
 
