@@ -10,6 +10,12 @@
 ## Capturing Ethernet0
 ![DNS](/Images/DNS6.png)
 
+## Filtering UDP port
+![DNS](/Images/DNS7.png)
+
+![DNS](/Images/.png)
+
+
 
 
 
