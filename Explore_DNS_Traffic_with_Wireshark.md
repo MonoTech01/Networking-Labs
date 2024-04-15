@@ -14,8 +14,6 @@
 ### Filter UDP port
 ![DNS](/Images/DNS7.png)
 
-![DNS](/Images/DNS8.png)
-
 ![DNS](/Images/DNS9.png)
 
 ![DNS](/Images/DNS10.png)
@@ -25,8 +23,12 @@
 ![DNS](/Images/DNS12.png)
 
 ## Explore DNS Response Traffic
+![DNS](/Images/DNS8.png)
+
 ![DNS](/Images/DNS13.png)
+
 ![DNS](/Images/DNS14.png)
+
 ![DNS](/Images/DNS15.png)
 
 
