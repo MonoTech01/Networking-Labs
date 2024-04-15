@@ -25,11 +25,13 @@
 ## Explore DNS Response Traffic
 ![DNS](/Images/DNS8.png)
 
+![DNS](/Images/DNS15.png)
+
 ![DNS](/Images/DNS13.png)
 
 ![DNS](/Images/DNS14.png)
 
-![DNS](/Images/DNS15.png)
+
 
 
 
