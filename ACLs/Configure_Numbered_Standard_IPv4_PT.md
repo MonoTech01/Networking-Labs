@@ -3,6 +3,11 @@ Part 1: Plan an ACL Implementation
 
 Part 2: Configure, Apply, and Verify a Standard ACL
 
+# Topology & Addressing Table
+![ACL_PT](/Images/PT_5.1.8_2.png)
+
+![ACL_PT](/Images/PT_5.1.8_1.png)
+
 # Background / Scenario
 Standard access control lists (ACLs) are router configuration scripts that control whether a router permits or denies packets based on the source address. This activity focuses on defining filtering criteria, configuring standard ACLs, applying ACLs to router interfaces, and verifying and testing the ACL implementation. The routers are already configured, including IP addresses and Enhanced Interior Gateway Routing Protocol (EIGRP) routing.
 
