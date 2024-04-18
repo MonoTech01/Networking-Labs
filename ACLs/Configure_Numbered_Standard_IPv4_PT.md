@@ -28,6 +28,12 @@ R3: The 192.168.10.0/24 network is not allowed to communicate with the 192.168.3
 ![ACL_PT](/Images/PT_5.1.8_10.png)
 
 # Verify
+![ACL_PT](/Images/PT_5.1.8_12.png)
+![ACL_PT](/Images/PT_5.1.8_13.png)
+![ACL_PT](/Images/PT_5.1.8_14.png)
+
+# Report - 100% Complete
+![ACL_PT](/Images/PT_5.1.8_11.png)
 
 
 
