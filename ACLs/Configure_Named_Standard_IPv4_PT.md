@@ -15,7 +15,7 @@ The senior network administrator has asked you to create a standard named ACL to
 # Verify
 All workstations can ping the Web Server, but only PC1 and the Web Server can ping the File Server.
 
-# Report - 100% Complete
+# Report - 100% Completion
 ![ACL_PT](/Images/PT_5.1.9_6.png)
 
 
