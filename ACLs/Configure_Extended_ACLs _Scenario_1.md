@@ -15,9 +15,7 @@ Apply ACLs cautiously in production environments to avoid unintended network dis
 
 # Performance
 ## PC1 needs FTP access to the server.
-Configure an ACL to permit FTP and ICM
-
-P from PC1 LAN
+Configure an ACL to permit FTP and ICMP from PC1 LAN
 
 ![ACLs_5.4.12](/Images/PT_5.4.12_3.png)
 ![ACLs_5.4.12](/Images/PT_5.4.12_3a.png)
