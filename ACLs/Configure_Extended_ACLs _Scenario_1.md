@@ -14,11 +14,19 @@ This means:
 Apply ACLs cautiously in production environments to avoid unintended network disruptions.
 
 # Performance
-## Part 1: Extended Numbered ACL
+## PC1 needs FTP access to the server.
+Configure an ACL to permit FTP and ICM
+
+P from PC1 LAN
+
+![ACLs_5.4.12](/Images/PT_5.4.12_3.png)
+![ACLs_5.4.12](/Images/PT_5.4.12_3a.png)
+![ACLs_5.4.12](/Images/PT_5.4.12_4.png)
+![ACLs_5.4.12](/Images/PT_5.4.12_5.png)
+![ACLs_5.4.12](/Images/PT_5.4.12_6.png)
+
 
 ### Create: 
-
-ACL 100 with the following rules:
 
 R1(config)# access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
 
