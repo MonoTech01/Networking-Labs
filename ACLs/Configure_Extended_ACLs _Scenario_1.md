@@ -46,8 +46,10 @@ Ping PC2 from PC1. The ping failed because the ACL doesn't explicitly permit thi
 
 
 ## Part 2: Extended Named ACL
+### Configure an ACL to permit HTTP access and ICMP from PC2 LAN.
 ### Create
-a named ACL called 'HTTP_ONLY'
+Named ACLs start with the "ip" keyword.
+A named ACL called 'HTTP_ONLY'
 
 R1(config)# ip access-list extended HTTP_ONLY
 
