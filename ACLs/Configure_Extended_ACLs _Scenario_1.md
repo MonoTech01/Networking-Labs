@@ -47,24 +47,33 @@ Ping PC2 from PC1. The ping failed because the ACL doesn't explicitly permit thi
 
 ## Part 2: Extended Named ACL
 ### Configure an ACL to permit HTTP access and ICMP from PC2 LAN.
-### Create
-Named ACLs start with the "ip" keyword.
+### Importance: Named ACLs start with the "ip" keyword.
+### Create and Apply
 A named ACL called 'HTTP_ONLY'
+
+Commands: 
+
+R1(config-ext-nacl)# permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www
+
+R1(config-ext-nacl)# permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62 
 
 R1(config)# ip access-list extended HTTP_ONLY
 
-Add rules to the ACL:
-R1(config-ext-nacl)# permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www
-R1(config-ext-nacl)# permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62 
+R1(config)# interface gigabitEthernet 0/1
 
-### Apply ACL:
+R1(config-if)# ip access-group HTTP_ONLY in
 
-Enter interface configuration mode for G0/1: R1(config)# interface gigabitEthernet 0/1
-Apply 'HTTP_ONLY' ACL to inbound traffic: R1(config-if)# ip access-group HTTP_ONLY in
+
+![ACLs_5.4.12](/Images/PT_5.4.12_7.png)
+![ACLs_5.4.12](/Images/PT_5.4.12_8.png)
 
 ### Verify:
 
 From PC2, ping the server (should succeed).
 From PC2, open the server's IP address in a web browser (should succeed).
 From PC2, open an FTP connection to the server (should fail).
+
+## Report - 100% Completion
+![ACLs_5.4.12](/Images/PT_5.4.12_9.png)
+
 
