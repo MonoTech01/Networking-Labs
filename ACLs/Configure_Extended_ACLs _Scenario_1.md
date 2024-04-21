@@ -17,6 +17,11 @@ Apply ACLs cautiously in production environments to avoid unintended network dis
 ## PC1 needs FTP access to the server.
 Configure an ACL to permit FTP and ICMP from PC1 LAN. When configured and applied, this ACL should permit FTP and ICMP. ICMP is listed, but FTP is not. This is because FTP is an application layer protocol that uses TCP at the transport layer.
 
+Rules:
+R1(config)# access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+
+R1(config)# access-list 100 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62
+
 ![ACLs_5.4.12](/Images/PT_5.4.12_3.png)
 ![ACLs_5.4.12](/Images/PT_5.4.12_3a.png)
 
@@ -25,6 +30,8 @@ Don't press Enter for all TCP traffic. To limit to FTP only, type 'eq ?' and sel
 ![ACLs_5.4.12](/Images/PT_5.4.12_4.png)
 
 Extend the current access list with a statement allowing ICMP traffic from PC1 to Server. No need to filter specific ICMP types. Finally, apply the rules on R1's int g0/0. 
+
+Enter interface configuration mode for G0/0 and apply ACL 100 to inbound traffic: R1(config-if)# ip access-group 100 in
 
 ![ACLs_5.4.12](/Images/PT_5.4.12_5.png)
 
@@ -37,23 +44,6 @@ Ping PC2 from PC1. The ping failed because the ACL doesn't explicitly permit thi
 
 ![ACLs_5.4.12](/Images/PT_5.4.12_6.png)
 
-
-### Create: 
-
-R1(config)# access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
-
-R1(config)# access-list 100 permit icmp 172.22.34.64 0.0.0.31 host 172.22.34.62
-
-### Apply: 
-
-Enter interface configuration mode for G0/0: R1(config)# interface gigabitEthernet 0/0
-Apply ACL 100 to inbound traffic: R1(config-if)# ip access-group 100 in
-
-### Verify:
-
-From PC1, ping the server (should succeed).
-From PC1, open an FTP connection to the server (should succeed).
-From PC1, ping PC2 (should fail).
 
 ## Part 2: Extended Named ACL
 ### Create
