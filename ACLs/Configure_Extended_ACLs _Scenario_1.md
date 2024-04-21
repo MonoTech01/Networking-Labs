@@ -36,9 +36,9 @@ Enter interface configuration mode for G0/0 and apply ACL 100 to inbound traffic
 ![ACLs_5.4.12](/Images/PT_5.4.12_5.png)
 
 ### Verify
-default username/ password is cisco
+default username/ password is cisco.
 
-Successfully accessed the server's ftp service.
+Successfully accessed the server's ftp service = ping from PC1 to the server must be successful.
 
 Ping PC2 from PC1. The ping failed because the ACL doesn't explicitly permit this traffic.
 
