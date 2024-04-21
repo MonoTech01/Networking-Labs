@@ -69,9 +69,11 @@ R1(config-if)# ip access-group HTTP_ONLY in
 
 ### Verify:
 
-From PC2, ping the server (should succeed).
-From PC2, open the server's IP address in a web browser (should succeed).
-From PC2, open an FTP connection to the server (should fail).
+From PC2, ping the server succeeded.
+From PC2, open the server's IP address in a web browser succeeded.
+From PC2, open an FTP connection to the server failed.
+![ACLs_5.4.12](/Images/PT_5.4.12_10.png)
+![ACLs_5.4.12](/Images/PT_5.4.12_11.png)
 
 ## Report - 100% Completion
 ![ACLs_5.4.12](/Images/PT_5.4.12_9.png)
