@@ -15,12 +15,26 @@ Apply ACLs cautiously in production environments to avoid unintended network dis
 
 # Performance
 ## PC1 needs FTP access to the server.
-Configure an ACL to permit FTP and ICMP from PC1 LAN
+Configure an ACL to permit FTP and ICMP from PC1 LAN. When configured and applied, this ACL should permit FTP and ICMP. ICMP is listed, but FTP is not. This is because FTP is an application layer protocol that uses TCP at the transport layer.
 
 ![ACLs_5.4.12](/Images/PT_5.4.12_3.png)
 ![ACLs_5.4.12](/Images/PT_5.4.12_3a.png)
+
+Don't press Enter for all TCP traffic. To limit to FTP only, type 'eq ?' and select 'ftp'.
+
 ![ACLs_5.4.12](/Images/PT_5.4.12_4.png)
+
+Extend the current access list with a statement allowing ICMP traffic from PC1 to Server. No need to filter specific ICMP types. Finally, apply the rules on R1's int g0/0. 
+
 ![ACLs_5.4.12](/Images/PT_5.4.12_5.png)
+
+### Verify
+default username/ password is cisco
+
+Successfully accessed the server's ftp service.
+
+Ping PC2 from PC1. The ping failed because the ACL doesn't explicitly permit this traffic.
+
 ![ACLs_5.4.12](/Images/PT_5.4.12_6.png)
 
 
