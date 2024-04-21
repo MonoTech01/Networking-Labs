@@ -72,6 +72,7 @@ R1(config-if)# ip access-group HTTP_ONLY in
 From PC2, ping the server succeeded.
 From PC2, open the server's IP address in a web browser succeeded.
 From PC2, open an FTP connection to the server failed.
+
 ![ACLs_5.4.12](/Images/PT_5.4.12_10.png)
 ![ACLs_5.4.12](/Images/PT_5.4.12_11.png)
 
