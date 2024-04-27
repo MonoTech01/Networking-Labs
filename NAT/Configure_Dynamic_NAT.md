@@ -38,8 +38,6 @@ From the web browser of L1, PC1, or PC2, access the web page for Server1.
 
 ## View NAT translations.
 
-View the NAT translations on R2. Identify the internal source address of the PC and the translated address from the NAT pool in the command output.
-
 ![NAT](/Images/DynamicNAT-10.png)
 
 # Q & A
