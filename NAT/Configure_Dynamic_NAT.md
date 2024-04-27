@@ -32,11 +32,20 @@ Configure R2 interfaces with the appropriate inside and outside NAT commands.
 
 ## Access services across the internet.
 From the web browser of L1, PC1, or PC2, access the web page for Server1.
+![NAT](/Images/DynamicNAT-7.png)
+![NAT](/Images/DynamicNAT-8.png)
+![NAT](/Images/DynamicNAT-9.png)
 
 ## View NAT translations.
+
 View the NAT translations on R2. Identify the internal source address of the PC and the translated address from the NAT pool in the command output.
 
-R2# show ip nat translations
+![NAT](/Images/DynamicNAT-10.png)
+
+# Q & A
+Q: What will happen if more than 2 devices attempt to access the internet?
+
+A: If more than two devices from the 172.16.0.0/16 network attempt to access the internet, only two devices will be able to receive a translated public IP address from the pool. This is because the pool only has two addresses. Subsequent devices will be unable to initiate outbound connections until an address in the pool becomes available (due to a device stopping its internet activity).
 
 # Report - 100% Completion
 
