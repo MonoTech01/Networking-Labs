@@ -7,12 +7,30 @@ Configure static NAT so that outside devices can access an inside server at its 
 ![StaticNAT](/Images/StaticNAT-0.png)
 
 # Access the network
-## Connectivity 
-PC1 and L1 do not successfully access Server 1
-PC1 and L1 can ping R1
-## Check R1's routing table and running-config 
+## Connectivity
+PC1 and L1 do not successfully access Server 1.
+
+PC1 and L1 can ping R1.
+
+### PC1 to Server 1 and R1
+![StaticNAT](/Images/StaticNAT-2.png)
+![StaticNAT](/Images/StaticNAT-1.png)
+
+### L1 to Server 1 and R1
+![StaticNAT](/Images/StaticNAT-4.png)
+![StaticNAT](/Images/StaticNAT-3.png)
+
+## Check R1's routing table and running-config
+![StaticNAT](/Images/StaticNAT-5.png)
+
 ## Configure static NAT
-### NAT Statement
+### NAT Statements
+![StaticNAT](/Images/StaticNAT-6.png)
+
 ### Apply to R1's interfaces: inside and outside
+![StaticNAT](/Images/StaticNAT-7.png)
+
+# Report - Complete 100%
+![StaticNAT](/Images/StaticNAT-8.png)
 
 
