@@ -18,7 +18,7 @@
 # Part 2: Verify Dynamic NAT with Overload Implementation
 ## Step 1: Access services across the internet.
 
-## Q & A
+### Q & A
 Were all connections successful?
 
 ## Step 2: View NAT translations.
@@ -41,7 +41,7 @@ Were all connections successful?
 
 ## Step 3: Compare NAT statistics on R1 and R2.
 
-# Q & A
+### Q & A
 Why doesn’t R2 list any dynamic mappings?
 
 
