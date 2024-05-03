@@ -16,12 +16,15 @@ In this step, you will explore three consumer WAN technologies and home networks
 
 Question:
 What are the WAN technologies in use?
+- Consumer WAN Technologies: Cellular Network, Home DSL Network, Home Cable Network.  
 
 ### b.     Examine the connections used in the network topology by selecting the Connections icon (the orange lightning bolt) in the PT devices menu. Hover over the media icons to display their names in the white box at the bottom of the PT window.
 
 Question:
 What media is used to connect the two home networks to the ISP? What devices in the home networks are directly connected to the ISP?
-
+- From ISP to DSL Modem: phone cable.
+- From ISP to Coaxial Splitter: coaxial cable.
+- From ISP to CellTower0: coaxial cable.
 ### c.     Click the DSL modem and open the Physical tab.
 
 Questions:
