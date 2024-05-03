@@ -1,5 +1,5 @@
 # Objectives
-- Investigating various types of WANs by exploring a topology that uses diverse connectivity technologies by describing different WAN connectivity options.
+Investigating various types of WANs by exploring a topology that uses diverse connectivity technologies by describing different WAN connectivity options.
 
 # Scenario
 Explore WAN technologies that are used to connect business and home users to data services.
