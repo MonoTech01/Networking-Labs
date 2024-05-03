@@ -95,4 +95,4 @@ Ping devices within the Business WAN and the Consumer WAN networks. Also ping be
 - Similar to the above situation, Laptop 2 could not ping PC Store 2-2.
 ![WAN](/Images/WANconcepts-10.png)
 
-Is this a good situation? Yes, It is good for security reasons. The business network must not be reached from other normal home networks except for specific cases that are configured in the business's network system.
+Is this a good situation? Yes, It is good for security reasons. The business network must not be reached from other normal home networks. 
