@@ -56,6 +56,7 @@ What is its IP address? Where did the IP address come from?
 - 198.51.100.100
 ![WAN](/Images/WANconcepts-4.png)
 - ISP
+  
 What data service is the cellphone currently using (cellular data or Wi-Fi)?
 - Cellular
 
