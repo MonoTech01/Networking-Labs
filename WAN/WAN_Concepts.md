@@ -27,6 +27,7 @@ What media is used to connect the two home networks to the ISP? What devices in 
 
 What ports are available on the device and what is connected to them?
 - Line 0 (ISP-DSL Modem) and Fast ethernet 0 (DSL Modem - Wireless Router2)
+![WAN](/Images/WANconcepts-1.png)
 
 What is the purpose of the DSL modem?
 - A DSL modem essentially converts the signal from the telephone network (analog) into a format usable by your home network (digital). It acts as a translator between these two worlds.
@@ -41,15 +42,19 @@ Questions:
 What does the cable modem do? What connections does it have?
 - The cable modem takes the high-speed data signal from the cable company delivered through a coaxial cable and converts that signal into a digital format your home network devices can understand (like computers, phones). It has coaxial and fast ethernet 0 connections
 
+![WAN](/Images/WANconcepts-2.png)
+
 Which port does the cable from the cable modem connect to on the home wireless router? Where did the interface IP address come from?
 - The internet port - Blue one in the picture!
 - It comes from the ISP.
-
+  
+![WAN](/Images/WANconcepts-3.png)
 
 ### e.     Look at the Smartphone.
 
 What is its IP address? Where did the IP address come from?
 - 198.51.100.100
+![WAN](/Images/WANconcepts-4.png)
 - ISP
 What data service is the cellphone currently using (cellular data or Wi-Fi)?
 - Cellular
@@ -65,7 +70,8 @@ What different types of connections do you see in use in the Business network?
 
 ### b.     Open the physical view for the StoreNet switch.
 What types of interfaces are present?
-- Picture
+
+![WAN](/Images/WANconcepts-5.png)
 
 Which interfaces and media are used to connect the store networks to the Business Headquarters network? Why was this done?
 - Copper cable.
@@ -77,10 +83,15 @@ What type of WAN service is used to connect the Business Headquarters router to 
 # Part 2: Explore Connectivity
 Questions:
 Ping devices within the Business WAN and the Consumer WAN networks. Also ping between the networks and the between the networks and the web server. Can all hosts ping each other and the web server?
+- Store 1-1, Store 2-1, Laptop 2 could ping the Web Server
+![WAN](/Images/WANconcepts-6.png)
+![WAN](/Images/WANconcepts-7.png)
+![WAN](/Images/WANconcepts-8.png)
 
-IP address of PC Store 1-1 is 192.168.10.4
-Laptop 2 could not ping PC Store 1-1
+- IP address of PC Store 1-1 is 192.168.10.4. Laptop 2 could not ping PC Store 1-1.
+![WAN](/Images/WANconcepts-9.png)
 
-Similar to the above situation, Laptop 2 could not ping PC Store 2-2
+- Similar to the above situation, Laptop 2 could not ping PC Store 2-2.
+![WAN](/Images/WANconcepts-10.png)
 
-Is this a good situation? Yes, because the business should not be easily reached from other networks. It is good for security reasons.
+Is this a good situation? Yes, It is good for security reasons. The business network must not be reached from other normal home networks except for specific cases that are configured in the business's network system.
