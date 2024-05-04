@@ -87,14 +87,17 @@ What type of WAN service is used to connect the Business Headquarters router to 
 Questions:
 Ping devices within the Business WAN and the Consumer WAN networks. Also ping between the networks and the between the networks and the web server. Can all hosts ping each other and the web server?
 - Store 1-1, Store 2-1, Laptop 2 could ping the Web Server
+  
 ![WAN](/Images/WANconcepts-6.png)
 ![WAN](/Images/WANconcepts-7.png)
 ![WAN](/Images/WANconcepts-8.png)
 
 - IP address of PC Store 1-1 is 192.168.10.4. Laptop 2 could not ping PC Store 1-1.
+  
 ![WAN](/Images/WANconcepts-9.png)
 
 - Similar to the above situation, Laptop 2 could not ping PC Store 2-2.
+  
 ![WAN](/Images/WANconcepts-10.png)
 
 Is this a good situation? Yes, It is good for security reasons. The business network must not be reached from other normal home networks. 
