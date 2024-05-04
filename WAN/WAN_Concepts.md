@@ -54,7 +54,9 @@ Which port does the cable from the cable modem connect to on the home wireless r
 
 What is its IP address? Where did the IP address come from?
 - 198.51.100.100
+  
 ![WAN](/Images/WANconcepts-4.png)
+
 - ISP
   
 What data service is the cellphone currently using (cellular data or Wi-Fi)?
