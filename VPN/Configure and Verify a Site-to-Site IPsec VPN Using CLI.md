@@ -9,19 +9,26 @@
 
 Ping from PC-A to PC-C.
 
+### Check PC=C's IP address
+
+### Ping -> Worked!
+
+
 ## Step 2: Enable the Security Technology package.
 
-a.     On R1, issue the show version command to view the Security Technology package license information.
+### a.     On R1, issue the show version command to view the Security Technology package license information.
+- security      disable       None          None => It's not enabled yet!
 
-b.     If the Security Technology package has not been enabled, use the following command to enable the package.
+
+### b,c   If the Security Technology package has not been enabled, use the following command to enable the package
 
 R1(config)# license boot module c1900 technology-package securityk9
 
-c.     Accept the end-user license agreement.
-
 d.     Save the running-config and reload the router to enable the security license.
 
+
 e.     Verify that the Security Technology package has been enabled by using the show version command.
+
 
 ## Step 3: Identify interesting traffic on R1.
 
