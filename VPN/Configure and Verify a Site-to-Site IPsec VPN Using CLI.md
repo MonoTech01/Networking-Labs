@@ -1,6 +1,6 @@
 # Toppology
 ![VPN](/Images/VPN-0.png)
-#  Phase 1 + 2 Policy Parameters + Passwords
+# Addressing Table + Phase 1 & 2 Policy Parameters + Passwords
 ![VPN](/Images/VPN-1.png)
 ![VPN](/Images/VPN-2.png)
 # Part 1: Configure IPsec Parameters on R1
