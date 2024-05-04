@@ -9,7 +9,7 @@
 
 Ping from PC-A to PC-C.
 
-### Check PC=C's IP address
+### Check PC-C's IP address
 ![VPN](/Images/VPN-3.png)
 
 ### Ping -> Worked!
@@ -39,15 +39,13 @@ d.     Save the running-config and reload the router to enable the security lice
 
 e.     Verify that the Security Technology package has been enabled by using the show version command.
 
-Check the packages after the reboot!
+Check the package after the reload!
 
 ![VPN](/Images/VPN-9.png)
 
 ## Step 3: Identify interesting traffic on R1.
 
 Configure ACL 110 to identify the traffic from the LAN on R1 to the LAN on R3 as interesting. This interesting traffic will trigger the IPsec VPN to be implemented when there is traffic between the R1 to R3 LANs. All other traffic sourced from the LANs will not be encrypted. Because of the implicit deny all, there is no need to configure a deny ip any any statement.
-
-R1(config)# access-list 110 permit ip 192.168.1.0 0.0.0.255 192.168.3.0 0.0.0.255
 
 ![VPN](/Images/VPN-10.png)
 
@@ -100,7 +98,7 @@ Configure reciprocating parameters on R3. Configure ACL 110 identifying the traf
 
 ## Step 3: Configure the IKE Phase 1 ISAKMP properties on R3.
 
-Configure the crypto ISAKMP policy 10 properties on R3 along with the shared crypto key vpnpa55.
+I forgot to screenshoot for this step, but I listed my commands below:
 
 R3(config)# crypto isakmp policy 10
 
@@ -117,6 +115,8 @@ R3(config)# crypto isakmp key vpnpa55 address 10.1.1.2
 ## Step 4: Configure the IKE Phase 2 IPsec policy on R3.
 
 a.     Create the transform-set VPN-SET to use esp-aes and esp-sha-hmac.
+
+I forgot to screenshoot for this step, but I listed my commands below:
 
 R3(config)# crypto ipsec transform-set VPN-SET esp-aes esp-sha-hmac
 
