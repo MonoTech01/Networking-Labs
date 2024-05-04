@@ -10,24 +10,37 @@
 Ping from PC-A to PC-C.
 
 ### Check PC=C's IP address
+![VPN](/Images/VPN-3.png)
 
 ### Ping -> Worked!
-
+![VPN](/Images/VPN-4.png)
 
 ## Step 2: Enable the Security Technology package.
 
 ### a.     On R1, issue the show version command to view the Security Technology package license information.
-- security      disable       None          None => It's not enabled yet!
+security      disable       None          None => It's not enabled yet!
+
+![VPN](/Images/VPN-5.png)
 
 
 ### b,c   If the Security Technology package has not been enabled, use the following command to enable the package
 
 R1(config)# license boot module c1900 technology-package securityk9
+![VPN](/Images/VPN-6.png)
+
+Check:
+
+![VPN](/Images/VPN-7.png)
 
 d.     Save the running-config and reload the router to enable the security license.
 
+![VPN](/Images/VPN-8.png)
+
 
 e.     Verify that the Security Technology package has been enabled by using the show version command.
+
+![VPN](/Images/VPN-9.png)
+
 
 
 ## Step 3: Identify interesting traffic on R1.
