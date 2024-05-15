@@ -30,30 +30,25 @@ a.     On the Admin-PC, open a command prompt.
 
 b.     SSH into the gateway router at 192.168.1.1 using the username admin01 and the password S3cre7P@55.
 
-PC> ssh –l admin01 192.168.1.1
-
-Open
-
-Password:
-
-Edge1#
+![CDP](/Images/CDP-pic2.png)
 
 Note: Notice that you are placed directly into privileged EXEC mode. This is because the admin01 user account is set to privilege level 15.
 
 c.     Use the show ip interface brief and show interfaces commands to document the Edge1 router’s physical interfaces, IP addresses, and subnet masks in the Addressing Table.
 
+![CDP](/Images/CDP-pic3.png)
+
+![CDP](/Images/CDP-pic4.png)
+
 d.     From Edge1, use SSH to access the Remote Branch Office at 209.165.200.10 with the username branchadmin and the same password as above:
 
-Edge1# ssh –l branchadmin 209.165.200.10
-
-Open
-
-Password:
-
-Branch-Edge#
+![CDP](/Images/CDP-pic5.png)
 
 Q: After connecting to the Remote Branch Office what piece of previously missing information can now be added to the Addressing Table above?
+
 A: 
+
+![CDP](/Images/CDP-pic6.png)
 
 # Part 2: Use CDP to Discover Neighboring Devices
 You are now remotely connected to the Branch-Edge router. Using CDP, begin looking for connected network devices.
