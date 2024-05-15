@@ -1,3 +1,8 @@
+# Topology & Addressing Table
+![CDP](/Images/CDP-pic0.png)
+
+![CDP](/Images/CDP-pic1.png)
+
 
 # Part 1: Use SSH to Remotely Access Network Devices
 In Part 1, use the Admin-PC to remotely access the Edge1 gateway router. Next, from the Edge1 router you will SSH into the Remote Branch Office.
