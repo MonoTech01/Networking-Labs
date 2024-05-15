@@ -3,6 +3,25 @@
 
 ![CDP](/Images/CDP-pic1.png)
 
+# Scenario
+A senior network administrator requires you to map the Remote Branch Office network and discover the name of a recently installed switch that still needs an IP address to be configured. Your task is to create a map of the branch office network. You must record all of the network device names, IP addresses and subnet masks, and physical interfaces interconnecting the network devices, as well as the name of the switch that does not have an IP address.
+
+To map the network, you will use SSH for remote access and the Cisco Discovery Protocol (CDP) to discover information about neighboring network devices. Because CDP is a Layer 2 protocol, it can be used to discover information about devices that do not have IP addresses. You will record the gathered information to complete the Addressing Table and provide a topology diagram of the Remote Branch Office network.
+
+The local and remote administrative usernames and passwords are:
+
+Local Network
+
+Username: admin01
+
+Password: S3cre7P@55
+
+Branch Office Network
+
+Username: branchadmin
+
+Password: S3cre7P@55
+
 
 # Part 1: Use SSH to Remotely Access Network Devices
 In Part 1, use the Admin-PC to remotely access the Edge1 gateway router. Next, from the Edge1 router you will SSH into the Remote Branch Office.
