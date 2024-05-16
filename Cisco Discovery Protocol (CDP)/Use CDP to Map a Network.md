@@ -44,10 +44,6 @@ d.     From Edge1, use SSH to access the Remote Branch Office at 209.165.200.10 
 
 ![CDP](/Images/CDP-pic5.png)
 
-Q: After connecting to the Remote Branch Office what piece of previously missing information can now be added to the Addressing Table above?
-
-A: 
-
 ![CDP](/Images/CDP-pic6.png)
 
 # Part 2: Use CDP to Discover Neighboring Devices
@@ -61,39 +57,24 @@ Branch-Edge# show interfaces
 
 b.     Security best practice recommends only running CDP when needed, so CDP may need to be turned on. Use the show cdp command to display its status.
 
-Branch-Edge# show cdp
-
-% CDP is not enabled
+![CDP](/Images/CDP-pic7.png)
 
 c.     You need to turn on CDP, but it is a good idea to only broadcast CDP information to internal network devices and not to external networks. To do this, turn on the CDP protocol and then disable CDP on the S0/0/1 interface.
 
-Branch-Edge# configure terminal
+![CDP](/Images/CDP-pic8.png)
 
-Branch-Edge(config)# cdp run
-
-Branch-Edge(config)# interface s0/0/1
-
-Branch-Edge(config-if)# no cdp enable
-
-Branch-Edge(config-if)# exit
 
 d.     Issue a show cdp neighbors command to find any neighboring network devices.
 
 Note: CDP will only show connected Cisco devices that are also running CDP.
 
-Branch-Edge# show cdp neighbors
-
-Q: Is there a neighboring network device? What type of device is it? What is its name? On what interface is it connected? Is the device’s IP address listed? Record the information in the Addressing Table.
-A: 
+![CDP](/Images/CDP-pic9.png)
 
 ## Note: It may take some time for CDP updates to be received. If you see no output from the command, press the Fast Forward Time button several times.
 
 e.     To find the IP address of the neighboring device use the show cdp neighbors detail command and record the ip address:
 
-Branch-Edge# show cdp neighbors detail
-
-Q: Aside from the neighboring device’s IP address, what other piece of potentially sensitive information is listed?
-A: 
+![CDP](/Images/CDP-pic10.png)
 
 f.      Now that you know the IP address of the neighbor device, connect to it with SSH in order to discover other devices that may be its neighbors.
 
@@ -101,17 +82,14 @@ f.      Now that you know the IP address of the neighbor device, connect to it w
 
 Branch-Edge# ssh –l branchadmin <the ip address of the neighbor device>
 
-Q: After successfully connecting with SSH, what does the command prompt show?
-A: 
+![CDP](/Images/CDP-pic11.png)
 
 g.     You are remotely connected to the next neighbor. Use the show cdp neighbors command, and the show cdp neighbors detail command, to discover other connected neighbor devices.
 
-Question:
-What types of network devices neighbor this device? Record any newly discovered devices in the Addressing Table. Include their hostname, interfaces, and IP addresses.
+![CDP](/Images/CDP-pic12.png)
+
+![CDP](/Images/CDP-pic13.png)
 
 h.     Continue discovering new network devices using SSH and the show CDP commands. Eventually, you will reach the end of the network and there will be no more devices to discover.
-
-Question:
-What is the name of the switch that does not have an IP address on the network?
 
 i.      Draw a topology of the Remote Branch Office network using the information you have gathered using CDP.
