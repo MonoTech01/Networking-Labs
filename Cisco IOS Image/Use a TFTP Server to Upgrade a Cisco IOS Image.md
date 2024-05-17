@@ -78,14 +78,12 @@ Close configuration window
 Part 2: Backup an IOS Image to a TFTP Server
 Open configuration window
 
-a.     On R1, display the contents of flash and record the IOS image.
-
-b.     Use the copy command to back up the IOS image in flash memory on R1 to a TFTP server. Note: The isr4300 image is considerably larger than the c1900 image. It will take longer to transmit it to the TFTP server.
+a+b    On R1, display the contents of flash and record the IOS image; Use the copy command to back up the IOS image in flash memory on R1 to a TFTP server. Note: The isr4300 image is considerably larger than the c1900 image. It will take longer to transmit it to the TFTP server.
 
 - Check the recent version of R1
   
  ![CiscoIOS](/Images/CiscoIOSImage-pic13.png)
-  
+    
 - Copy
   
 ![CiscoIOS](/Images/CiscoIOSImage-pic12.png)
