@@ -13,12 +13,7 @@ A TFTP server can help manage the storage of IOS images and revisions to IOS ima
 
 Step 1: Upgrade an IOS image on a router.
 
-a.     Access the TFTP server and enable the TFTP service.
-
-b.     Note the IOS image files that are available on the TFTP server.
-
-Question:
-Which IOS images stored on the server are compatible with a 1941 router?
+a+b.     Access the TFTP server and enable the TFTP service; Note the IOS image files that are available on the TFTP server.
 
 Open configuration window
 
@@ -28,33 +23,14 @@ d.     Copy the CISCO1941/K9 IOS version 15.5 image for the 1941 router from the
 
 Note: In an actual network, if there is more than one interface active on the router, you may need to enter the ip tftp source interface command to specify which interface should be used to contact the TFTP server. This command is not supported in PT 7.2 and older versions and is not necessary to complete this activity.
 
-R2# copy tftp: flash:
-
-Address or name of remote host []? 192.168.2.254
-
-Source filename []? c1900-universalk9-mz.SPA.155-3.M4a.bin
-
-Destination filename [c1900-universalk9-mz.SPA.155-3.M4a.bin]?
-
-Accessing tftp://192.168.2.254/c1900-universalk9-mz.SPA.155-3.M4a.bin....
-
-Loading c1900-universalk9-mz.SPA.155-3.M4a.bin from 192.168.2.254: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-[OK - 33591768 bytes]
-
-
-33591768 bytes copied in 4.099 secs (860453 bytes/sec)
-
 e.     Verify that the IOS image has been copied to flash.
 
 Question:
-How many IOS images are located in flash?
+How many IOS images are located in flash? 2
 
-f.      Use the boot system command to load the version 15.5 IPBase image on the next reload.
+f+g,      Use the boot system command to load the version 15.5 IPBase image on the next reload; Save the configuration and reload R2.
 
 R2(config)# boot system flash c1900-universalk9-mz.SPA.155-3.M4a.bin
-
-g.     Save the configuration and reload R2.
 
 h.     Use the show version command to verify the upgraded IOS image is loaded after R2 reboots.
 
@@ -106,23 +82,10 @@ a.     On R1, display the contents of flash and record the IOS image.
 
 b.     Use the copy command to back up the IOS image in flash memory on R1 to a TFTP server. Note: The isr4300 image is considerably larger than the c1900 image. It will take longer to transmit it to the TFTP server.
 
- 
-
-R1# copy flash: tftp:
-
-Source filename []? isr4300-universalk9.03.16.05.S.155-3.S5-ext.SPA.bin
-
-Address or name of remote host []? 192.168.2.254
-
-Destination filename [isr4300-universalk9.03.16.05.S.155-3.S5-ext.SPA.bin]?
-
-Writing isr4300-universalk9.03.16.05.S.155-3.S5-ext.SPA.bin....!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! --- output omitted ----
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-[OK - 486899872 bytes]
-
-486899872 bytes copied in 18.815 secs (83367 bytes/sec)
+- Check the recent version of R1
+  
+- Copy
+  
 
 c.     Access the TFTP server and verify that the IOS image has been copied to the TFTP server.
 
