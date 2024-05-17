@@ -1,5 +1,6 @@
 # Topology and Addressing table
 ![CiscoIOS](/Images/CiscoIOSImage-pic0.png)
+![CiscoIOS](/Images/CiscoIOSImage-pic1.png)
 
 # Objectives
 Part 1: Upgrade an IOS Image on a Cisco Device
