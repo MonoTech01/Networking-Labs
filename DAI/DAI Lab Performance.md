@@ -13,7 +13,7 @@ Things we should check before configuring DAI on VLAN 30:
 # 2. DAI on VLAN 30
 ![DAI](/DAI/Images/DAI3.png)
 
-A broadcast of a different network from g0/0 is blocked
+A broadcast of a different network 10.1.0.0 to the switch's int g0/0 is blocked
 
 # 3. Verify
 ![DAI](/DAI/Images/DAI4.png)
