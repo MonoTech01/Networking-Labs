@@ -7,6 +7,10 @@ It takes info from DHCP snooping!!!!!!
 
 That is why I need to check DHCP snooping to be enabled and see DHCP binding, DAI has something to work with!
 
+Command:
+
+show ip dhcp binding
+
 
 ## 1. Apply DAI for VLAN 30 - Network: 10.16.20.0/24
 
