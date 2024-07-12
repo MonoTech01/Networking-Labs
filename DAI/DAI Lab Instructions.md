@@ -1,7 +1,7 @@
 # Dynamic ARP Inspection - DAI
 
 # Q&A
-How does a switch knows what the correct layer 3 and layer 2 combos are for each of the hosts?
+How does a switch knows what the correct layer 3 and layer 2 combos for each of the hosts?
 
 It takes info from DHCP snooping!!!!!!
 
