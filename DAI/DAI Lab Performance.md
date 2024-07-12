@@ -5,6 +5,8 @@ Things we should check before configuring DAI on VLAN 30:
 
 # 2. DAI on VLAN 30
 
+# 3. Verify
+
 Note:
 The DAI process can use the binding table from DHCP snooping but may deny some ARP messages because they're from non-DHCP clients and the switch doesn't know the L3/L2 mappings for those clients
 
