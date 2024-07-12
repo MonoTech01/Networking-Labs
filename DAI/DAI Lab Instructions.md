@@ -11,7 +11,6 @@ Command:
 
 show ip dhcp binding
 
-
 ## 1. Apply DAI for VLAN 30 - Network: 10.16.20.0/24
 
 ## 2. Set g3/3 as a trusted port
