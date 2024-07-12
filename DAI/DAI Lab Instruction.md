@@ -8,7 +8,7 @@ It takes info from DHCP snooping!!!!!!
 That is why I need to check DHCP snooping to be enabled and see DHCP binding, DAI has something to work with!
 
 
-## Apply DAI for VLAN 30 - IP address:  10.16.20.0/24
+## Apply DAI for VLAN 30 - Network: 10.16.20.0/24
 
 ## Set g3/3 as a trusted port
 
