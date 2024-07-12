@@ -13,8 +13,10 @@ Things we should check before configuring DAI on VLAN 30:
 # 2. DAI on VLAN 30
 ![DAI](/DAI/Images/DAI3.png)
 
-# 3. Verify
+A broadcast of a different network from g0/0 is blocked
 
+# 3. Verify
+![DAI](/DAI/Images/DAI4.png)
 
 Note:
 The DAI process can use the binding table from DHCP snooping but may deny some ARP messages because they're from non-DHCP clients and the switch doesn't know the L3/L2 mappings for those clients
