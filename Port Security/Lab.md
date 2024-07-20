@@ -125,3 +125,55 @@ Check:
 
 Trigger:
 - SW1, Configure (SVI - Switch Virtual Int) int Vlan1 IP address - 10.0.0.10 255.255.255.0 = a new MAC address
+
+      SW1>en
+      SW1#config t
+      Enter configuration commands, one per line.  End with CNTL/Z.
+      SW1(config)#int vlan 1
+      SW1(config-if)#ip add 10.0.0.10 255.255.255.0
+      SW1(config-if)#no shut
+      
+      SW1(config-if)#
+      %LINK-5-CHANGED: Interface Vlan1, changed state to up
+      
+      %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+      
+      SW1(config-if)#exit
+      SW1(config)#end
+      SW1#
+      %SYS-5-CONFIG_I: Configured from console by console
+      
+      SW1#ping 10.0.0.254
+      
+      Type escape sequence to abort.
+      Sending 5, 100-byte ICMP Echos to 10.0.0.254, timeout is 2 seconds:
+      .....
+      Success rate is 0 percent (0/5)
+      -
+
+=> Not successful because SW2 only accepted 4 MAC addresses of PCs and SW1, not int vlan 1 of SW1
+
+    SW2#show port-security 
+    Secure Port MaxSecureAddr CurrentAddr SecurityViolation Security Action
+                   (Count)       (Count)        (Count)
+    --------------------------------------------------------------------
+           Gig0/1        4          4                 6         Restrict
+    ----------------------------------------------------------------------
+    SW2#show port-security int g0/1
+    Port Security              : Enabled
+    Port Status                : Secure-up
+    Violation Mode             : Restrict
+    Aging Time                 : 0 mins
+    Aging Type                 : Absolute
+    SecureStatic Address Aging : Disabled
+    Maximum MAC Addresses      : 4
+    Total MAC Addresses        : 4
+    Configured MAC Addresses   : 0
+    Sticky MAC Addresses       : 4
+    Last Source Address:Vlan   : 0060.471C.1D19:1
+    Security Violation Count   : 6
+
+Security violation count increases!!!
+Syslog must be appeared!!!
+
+
