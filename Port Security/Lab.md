@@ -124,4 +124,4 @@ Check:
     SW2#
 
 Trigger:
-- Configure (SVI - Switch Virtual Int) int Vlan1 IP address
+- SW1, Configure (SVI - Switch Virtual Int) int Vlan1 IP address - 10.0.0.10 255.255.255.0 = a new MAC address
