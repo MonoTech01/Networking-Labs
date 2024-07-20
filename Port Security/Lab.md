@@ -124,15 +124,15 @@ Check:
     SW2#
 
 Trigger:
-- SW1, Configure (SVI - Switch Virtual Int) int Vlan1 IP address - 10.0.0.10 255.255.255.0 = a new MAC address
+SW1, Configure (SVI - Switch Virtual Int) int Vlan1 IP address - 10.0.0.10 255.255.255.0 = a new MAC address
 
       SW1>en
-      SW1#config t
-      Enter configuration commands, one per line.  End with CNTL/Z.
-      SW1(config)#int vlan 1
-      SW1(config-if)#ip add 10.0.0.10 255.255.255.0
-      SW1(config-if)#no shut
-      
+            SW1#config t
+            Enter configuration commands, one per line.  End with CNTL/Z.
+            SW1(config)#int vlan 1
+            SW1(config-if)#ip add 10.0.0.10 255.255.255.0
+            SW1(config-if)#no shut
+            
       SW1(config-if)#
       %LINK-5-CHANGED: Interface Vlan1, changed state to up
       
