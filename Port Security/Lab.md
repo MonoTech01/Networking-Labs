@@ -93,4 +93,31 @@ G0/1 of SW1 is a trunk port => G0/1 of SW2 should be a trunk! That was why I con
     Security Violation Count   : 0
 
   If you ping from PCs to R1 (10.0.0.254), the sticky MAC addresses of SW2 will be 4 because 3 PCs = 3 MAC, SW1 = 1 MAC.
-  
+
+    SW2#show port-security int g0/1
+    Port Security              : Enabled
+    Port Status                : Secure-up
+    Violation Mode             : Restrict
+    Aging Time                 : 0 mins
+    Aging Type                 : Absolute
+    SecureStatic Address Aging : Disabled
+    Maximum MAC Addresses      : 4
+    Total MAC Addresses        : 4
+    Configured MAC Addresses   : 0
+    Sticky MAC Addresses       : 4
+    Last Source Address:Vlan   : 0003.0003.0003:1
+    Security Violation Count   : 0
+
+## 2
+Check:
+
+    SW2#show port-security
+    Secure Port MaxSecureAddr CurrentAddr SecurityViolation Security Action
+                   (Count)       (Count)        (Count)
+    --------------------------------------------------------------------
+           Gig0/1        4          4                 0         Restrict
+    ----------------------------------------------------------------------
+    SW2#
+
+Trigger:
+- Configure (SVI - Switch Virtual Int) int Vlan1 IP address
