@@ -4,7 +4,7 @@
 Performed the lab using the Adept-CBT platform.
 
 ## Mission
-Create a etherchannel bundle for a trunk link between Sw1 and Sw2.
+Create an etherchannel bundle for a trunk link between Sw1 and Sw2.
 
 ## Topology
 
