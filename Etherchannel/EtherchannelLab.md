@@ -1,5 +1,8 @@
 # Lab Report
 
+# Source
+Adept-CBT
+
 ## Mission
 Create a etherchannel bundle for a trunk link between Sw1 and Sw2.
 
@@ -60,4 +63,5 @@ Configure Etherchannel Sw1 - Sw2
         show interface po1
         show run int po1
         show int po1 switchport
+
         
