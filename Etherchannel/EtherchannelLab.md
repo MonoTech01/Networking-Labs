@@ -40,4 +40,9 @@ Configure Etherchannel Sw1 - Sw2
         sw mode trunk
         channel-group 1 mode passive
         no shut
+
+        Verify
+        show int status
+        show LACP neighbors
+        show etherchannel sum
         
