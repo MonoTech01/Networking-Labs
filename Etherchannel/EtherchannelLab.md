@@ -1,5 +1,8 @@
 # Lab Report
 
+## Mission
+Create a etherchannel bundle for a trunk link between Sw1 and Sw2
+
 ## Topology
 
     Sw1                                          Sw2
