@@ -41,7 +41,7 @@ Configure Etherchannel Sw1 - Sw2
         channel-group 1 mode passive
         no shut
 
-        Verify
+        Verify for both switches
         show int status
         show LACP neighbors
         show etherchannel sum
