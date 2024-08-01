@@ -1,7 +1,7 @@
 # Lab Report
 
-# Source
-Adept-CBT
+## Source
+Performed the lab using the Adept-CBT platform.
 
 ## Mission
 Create a etherchannel bundle for a trunk link between Sw1 and Sw2.
@@ -23,10 +23,13 @@ Create a etherchannel bundle for a trunk link between Sw1 and Sw2.
     VLAN 20 - PC20a 10.20.0.51/24               PC20b 10.20.0.52/24
 
 ## Task
-Configure Etherchannel Sw1 - Sw2
-- LACP Sw1 active, Sw2 passive
-- Encapsulation dot1q
-- Mode trunk
+- Configure EtherChannel between switches Sw1 and Sw2.
+
+- Requirements:
+Protocol: LACP (Link Aggregation Control Protocol)
+Sw1: Active LACP negotiation
+Sw2: Passive LACP negotiation
+Trunking: 802.1Q encapsulation
   
 ## Performance
         Sw1
