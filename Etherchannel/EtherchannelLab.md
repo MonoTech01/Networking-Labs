@@ -25,11 +25,11 @@ Create an EtherChannel bundle between switches Sw1 and Sw2 to function as a trun
 ## Task
 - Configure EtherChannel between switches Sw1 and Sw2.
 
-- Requirements - 
-Protocol: LACP (Link Aggregation Control Protocol)
-Sw1: Active LACP negotiation
-Sw2: Passive LACP negotiation
-Trunking: 802.1Q encapsulation
+- Requirements
+    - Protocol: LACP (Link Aggregation Control Protocol)
+    - Sw1: Active LACP negotiation
+    - Sw2: Passive LACP negotiation
+    - Trunking: 802.1Q encapsulation
   
 ## Performance
         Sw1
