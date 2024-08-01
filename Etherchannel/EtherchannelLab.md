@@ -1,7 +1,7 @@
 # Lab Report
 
 ## Mission
-Create a etherchannel bundle for a trunk link between Sw1 and Sw2
+Create a etherchannel bundle for a trunk link between Sw1 and Sw2.
 
 ## Topology
 
@@ -30,6 +30,7 @@ Configure Etherchannel Sw1 - Sw2
         en
         config t
         int range g0/0-3
+        shut
         sw trunk encap dot1q
         sw mode trunk
         channel-group 1 mode active
@@ -39,6 +40,7 @@ Configure Etherchannel Sw1 - Sw2
         en
         config t
         int range g0/0-3
+        shut
         sw trunk encap dot1q
         sw mode trunk
         channel-group 1 mode passive
@@ -46,6 +48,16 @@ Configure Etherchannel Sw1 - Sw2
 
         Verify for both switches
         show int status
-        show LACP neighbors
         show etherchannel sum
+        show etherchannel
+        show lacp neighbor
+        show etherchannel detail
+
+        More Commands:
+        show etherchannel protocol
+        show etherchannel load-balance
+        show interfaces trunk
+        show interface po1
+        show run int po1
+        show int po1 switchport
         
