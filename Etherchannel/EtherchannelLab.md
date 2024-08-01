@@ -58,8 +58,10 @@ Create an EtherChannel bundle between switches Sw1 and Sw2 to function as a trun
         show etherchannel
         show lacp neighbor
         show etherchannel detail
+        
+        ping PCs to each other
 
-        More Commands:
+        More commands to verify
         show etherchannel protocol
         show etherchannel load-balance
         show interfaces trunk
