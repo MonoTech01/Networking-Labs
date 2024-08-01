@@ -4,7 +4,7 @@
 Performed the lab using the Adept-CBT platform.
 
 ## Mission
-Create an etherchannel bundle for a trunk link between Sw1 and Sw2.
+Create an EtherChannel bundle between switches Sw1 and Sw2 to function as a trunk link.
 
 ## Topology
 
@@ -25,7 +25,7 @@ Create an etherchannel bundle for a trunk link between Sw1 and Sw2.
 ## Task
 - Configure EtherChannel between switches Sw1 and Sw2.
 
-- Requirements:
+- Requirements - 
 Protocol: LACP (Link Aggregation Control Protocol)
 Sw1: Active LACP negotiation
 Sw2: Passive LACP negotiation
