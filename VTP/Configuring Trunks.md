@@ -29,13 +29,13 @@
     switchport trunk encapsulation dot1q
     switchport mode trunk
     
-## Key Points:
+# Key Points:
 - CDP: Cisco Discovery Protocol helps verify physical connections between Cisco devices.
 - Interface Range: Use interface range command to configure multiple consecutive interfaces simultaneously.
 - Trunk Encapsulation: Use .1q for trunking, allowing multiple VLANs to share the same physical link.
 - Trunk Mode: Set the interface mode to trunk to enable trunking.
 - Console Connection: Have a console cable and terminal emulator ready as a backup in case remote connectivity is lost.
 
-## Note:
+# Note:
 - These configurations ensure all links between the switches are configured as trunks using 802.1Q encapsulation, allowing for VLAN information to be propagated once VTP is configured.
 
