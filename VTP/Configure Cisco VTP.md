@@ -29,7 +29,10 @@ This lab exercise involves configuring VLANs, trunking, and VTP to enable commun
       (config-if)# no shut
 
       Ping successfully!!!!
-      
+      Verify for each SW:
+      show int trunk
+      show ip int bri
+      show int status    
   
 ## Part 2: VTP Configuration
 - Configure VTP Domain: Domain Name: Mono; Password: Mono1; Mode: SW1 - Server, SW3 - Server, SW2 - Client
@@ -69,7 +72,15 @@ This lab exercise involves configuring VLANs, trunking, and VTP to enable commun
       (config-if)# ip address 10.50.0.3 255.255.255.0
       (config-if)# no shutdown
 
+      Verify
+      show int status
+      show vlan bri
+
 ## Part 4: Verification
 - Verify VLAN and SVI Configuration: From the command line of any switch, ping the SVI IP addresses of the other two switches on VLAN 50. Successful pings confirm correct VLAN and SVI configuration.
-  
+
+      Ping successfully!!!
+      Verify:
+      show vtp status
+      
 # Note: This simple password is for lab purposes only. Use strong and unique passwords in production environments.
