@@ -48,11 +48,26 @@ This lab exercise involves configuring VLANs, trunking, and VTP to enable commun
 - Create VLAN 50: On either SW1 or SW3 (VTP servers), and name it "V50".
 - Configure SVI for VLAN 50: On each switch (SW1, SW2, SW3), configure an SVI for VLAN 50. Assign an IP address in the 10.5.0.0/24 subnet to each SVI, using the switch number as the last octet (e.g., SW1: 10.5.0.1, SW2: 10.5.0.2, SW3: 10.5.0.3).
 
-SW1
-
-
-
-
+      SW1
+      (config)# vlan 50
+      (config-vlan)# name V50
+      
+      SW2, SW3 are updated with the new VLAN due to VTP.
+      
+      SW1
+      (config)# int vlan 50
+      (config-if)# ip address 10.50.0.1 255.255.255.0
+      (config-if)# no shutdown
+      
+      SW2
+      (config)# int vlan 50
+      (config-if)# ip address 10.50.0.2 255.255.255.0
+      (config-if)# no shutdown
+      
+      SW3
+      (config)# int vlan 50
+      (config-if)# ip address 10.50.0.3 255.255.255.0
+      (config-if)# no shutdown
 
 ## Part 4: Verification
 - Verify VLAN and SVI Configuration: From the command line of any switch, ping the SVI IP addresses of the other two switches on VLAN 50. Successful pings confirm correct VLAN and SVI configuration.
