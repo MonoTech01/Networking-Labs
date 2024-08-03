@@ -83,4 +83,4 @@ This lab exercise involves configuring VLANs, trunking, and VTP to enable commun
       Verify:
       show vtp status
       
-# Note: This simple password is for lab purposes only. Use strong and unique passwords in production environments.
+### Note: This simple password is for lab purposes only. Use strong and unique passwords in production environments.
