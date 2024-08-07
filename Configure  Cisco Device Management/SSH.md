@@ -7,3 +7,16 @@ Configure Router R1:
 - Secure vty lines 0-15 for SSH-only access.
 
 ## Performance
+
+    R1
+    (config) # ip domain-name mono.com
+    
+    (config) # username admin privilege 15 secret monohye
+    
+    (config) # crypto key generate rsa modulus 2048
+    
+    (config) # ip ssh version 2
+    
+    (config) # line vty 0 15
+    (config-line)# transport input ssh
+    (config-line)# login local
