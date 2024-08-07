@@ -9,6 +9,7 @@ Configure Router R1:
 ## Performance
 
     R1
+    
     (config) # ip domain-name mono.com
     
     (config) # username admin privilege 15 secret monohye
