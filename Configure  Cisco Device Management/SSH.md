@@ -1,3 +1,4 @@
+# Lab Report
 ## Tasks
 Configure Router R1:
 - Set domain name of "mono.com".
@@ -25,8 +26,9 @@ Configure Router R1:
     Verify
     R2#ssh -l admin 192.168.10.1
     Password:
-
     R1#
+
+
 
     
     
