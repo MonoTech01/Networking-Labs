@@ -21,3 +21,14 @@ Configure Router R1:
     (config) # line vty 0 15
     (config-line)# transport input ssh
     (config-line)# login local
+
+    Verify
+    R2#ssh -l admin 192.168.10.1
+    Password:
+
+    R1#
+
+    
+    
+
+
