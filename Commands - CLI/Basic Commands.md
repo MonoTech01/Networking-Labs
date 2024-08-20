@@ -1,10 +1,3 @@
-# Router 
-Entering Configuration Mode
-
-en - Enters privileged EXEC mode for administrative tasks.
-
-config t - Enters global configuration mode for configuring general router settings.
-
 ## Basic Settings
 host R1 - Sets the router's hostname to “R1” for easier identification. 
 
@@ -124,6 +117,13 @@ interface vlan 1
 ip address 192.168.1.157 255.255.255.240
 
 no shutdown
+
+## Router 
+Entering Configuration Mode
+
+en - Enters privileged EXEC mode for administrative tasks.
+
+config t - Enters global configuration mode for configuring general router settings.
 
 
 ip default-gateway 192.168.1.158
