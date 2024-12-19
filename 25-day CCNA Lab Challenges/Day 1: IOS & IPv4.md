@@ -1,4 +1,4 @@
-Task:
+# Task:
 
 Login to device R1 and you'll notice that it has a non-default configuration already on it (as evidenced by its host name). Reset this device to a factory default configuration.
 
@@ -52,3 +52,5 @@ Confirm that you can Telnet from R4 to R3
 Confirm that you can SSH from R1 to R2
 
 Confirm that you can SSH from R4 to R5
+
+# Performance
