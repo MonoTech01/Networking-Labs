@@ -9,26 +9,26 @@ Welcome to my **CCNA Lab Repository**, where I document hands-on practice with *
 
 ### 🔹 **Cisco IOS Basics & Addressing**
 - ✅ Cisco IOS Command-Line Basics  
-- ✅ IPv4 Subnetting & Addressing  
-- ✅ IPv6 Addressing & Configuration  
+- 🔄 IPv4 Subnetting & Addressing   
+- 🔄 IPv6 Addressing & Configuration  
 
 ### 🔹 **Layer 2 Switching & VLANs**
-- ✅ Essential **Layer-2 Switching**  
-- ✅ **Routing VLANs** with Router-on-a-Stick  
-- ✅ **Spanning Tree Protocol (STP)** Configuration & Manipulation  
-- ✅ **EtherChannel** Configuration & Monitoring  
-- ✅ **Port Security** Implementation & Testing  
-- ✅ **DHCP Snooping** Configuration & Verification  
+- 🔄 Essential **Layer-2 Switching**  
+- 🔄 **Routing VLANs** with Router-on-a-Stick  
+- 🔄 **Spanning Tree Protocol (STP)** Configuration & Manipulation  
+- 🔄 **EtherChannel** Configuration & Monitoring  
+- 🔄 **Port Security** Implementation & Testing  
+- 🔄 **DHCP Snooping** Configuration & Verification  
 
 ### 🔹 **Routing & Network Security**
-- ✅ **IPv4-IPv6 Inter-VLAN Routing** & Static Routes  
-- ✅ **OSPF Multi-Area Routing (OSPFv2)**  
-- ✅ **AAA Authentication & Local Fallback** for Secure Logins  
-- ✅ **Standard & Extended Access Lists** for Security  
-- ✅ **Network Address Translation (NAT)** for Address Conservation  
+- 🔄 **IPv4-IPv6 Inter-VLAN Routing** & Static Routes  
+- 🔄 **OSPF Multi-Area Routing (OSPFv2)**  
+- 🔄 **AAA Authentication & Local Fallback** for Secure Logins  
+- 🔄 **Standard & Extended Access Lists** for Security  
+- 🔄 **Network Address Translation (NAT)** for Address Conservation  
 
 ### 🔹 **High Availability & Redundancy**
-- ✅ **Gateway Redundancy with HSRP**  
+- 🔄 **Gateway Redundancy with HSRP**  
 
 ### 🔹 **CCNA Troubleshooting Labs**  
 10+ **CCNA Troubleshooting Labs**, covering:  
