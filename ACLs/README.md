@@ -5,7 +5,6 @@ This section of my **CCNA Labs Repository** focuses on **Access Control Lists (A
 ## 🔹 Topics Covered:
 - **Standard ACLs** – Filtering traffic based on source IP  
 - **Extended ACLs** – Advanced filtering based on protocol, source, and destination  
-- **Named ACLs** – Custom ACLs for better readability and management  
 - **Applying ACLs** – Configuring ACLs on interfaces and VTY lines  
 - **Troubleshooting ACLs** – Debugging and verifying ACL rules  
 
