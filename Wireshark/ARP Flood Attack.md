@@ -14,4 +14,4 @@ If this is part of an **ARP poisoning attack**, the attacker could:
 - **Manipulate network traffic for malicious purposes**
 
 ### Mitigation Strategies:
-To mitigate or prevent this attack, Dynamic ARP Inspection (DAI) should be enabled on network switches to validate ARP requests and prevent spoofing. Additionally, network administrators should implement static ARP entries for critical infrastructure, complemented by VLAN segmentation to isolate broadcast traffic and reduce network congestion. Deploying Intrusion Detection Systems (IDS) will further enhance security by monitoring ARP traffic and promptly alerting administrators to suspicious activities.
+Dynamic ARP Inspection (DAI) should be enabled on network switches to validate ARP requests and prevent spoofing. Additionally, network administrators should implement static ARP entries for critical infrastructure, complemented by VLAN segmentation to isolate broadcast traffic and reduce network congestion. Deploying Intrusion Detection Systems (IDS) will further enhance security by monitoring ARP traffic and promptly alerting administrators to suspicious activities.
