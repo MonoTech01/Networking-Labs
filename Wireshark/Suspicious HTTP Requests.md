@@ -17,4 +17,4 @@ If successful, this attack could result in:
 This pattern indicates malicious activity, warranting further investigation and possible mitigation steps to protect user authentication security.
 
 ### Mitigation Strategies:
-we should implement a Web Application Firewall (WAF) to detect and block automated login attempts. Additionally, enforcing Multi-Factor Authentication (MFA) significantly reduces the risk of unauthorized access, even if credentials are compromised.
+We should implement a Web Application Firewall (WAF) to detect and block automated login attempts. Additionally, enforcing Multi-Factor Authentication (MFA) significantly reduces the risk of unauthorized access, even if credentials are compromised.
