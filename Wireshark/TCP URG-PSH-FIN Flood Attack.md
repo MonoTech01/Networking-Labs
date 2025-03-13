@@ -14,3 +14,6 @@ This attack pattern, observed throughout the capture, suggests an attempt to:
 - **Bypass security mechanisms**
 
 The persistent nature of the attack requires immediate mitigation strategies, such as **intrusion prevention systems (IPS)**, **rate limiting**, and **firewall rules** to minimize the impact.
+
+### Mitigation Strategies:
+We should deploy an Intrusion Prevention System (IPS) capable of identifying and blocking abnormal TCP flag combinations, thus mitigating resource exhaustion. Moreover, configuring firewall-based rate limiting and enabling TCP SYN cookies further protects against DoS attacks by ensuring only legitimate connection requests consume server resources.
