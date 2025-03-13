@@ -17,4 +17,4 @@ If successful, this attack could result in:
 This pattern indicates malicious activity, warranting further investigation and possible mitigation steps to protect user authentication security.
 
 ### Mitigation Strategies:
-We should deploy an Intrusion Prevention System (IPS) capable of identifying and blocking abnormal TCP flag combinations, thus mitigating resource exhaustion. Moreover, configuring firewall-based rate limiting and enabling TCP SYN cookies further protects against DoS attacks by ensuring only legitimate connection requests consume server resources.
+we should implement a Web Application Firewall (WAF) to detect and block automated login attempts. Additionally, enforcing Multi-Factor Authentication (MFA) significantly reduces the risk of unauthorized access, even if credentials are compromised.
