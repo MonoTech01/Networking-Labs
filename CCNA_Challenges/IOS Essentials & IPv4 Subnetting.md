@@ -1,122 +1,174 @@
 
-# Cisco IOS Essentials & IP Subnetting
+# Cisco Lab 1
 
-## 1. Reset R1 to Factory Defaults
+## 1. Factory Resetting R1
 
-1. From privileged EXEC mode (e.g., `R1#`), erase the current startup configuration:
+First, access the device's console. To erase the existing, non-default configuration on router R1 and restore it to its factory settings, execute the following commands from privileged EXEC mode:
 
-    ```
+    en  
+    erase startup-config
+    
+    reload
+    
+OR: write erase
+
+Upon reloading, the device will be in its factory default state.
+
+## 2. Device Configuration (All Devices)
+- Assign a Hostname
+- Disable DNS Lookup for Mistyped Commands
+- Ensure Uninterrupted Command Entry
+- Secure Privileged EXEC Mode
+- Activate Interfaces
+
+R1
+
     en
-    #write erase
+    config t
+    host R1
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-2
+    no shut
 
-    OR
+R2
 
-    #erase startup-config
-    ```
-
-2. **Reload** the device to load default settings from ROM:
-
-    ```
-    #reload
-    ```
-
-**Result:**  
-R1 should return to a factory-default state (basic prompt, no saved config).
-
----
-
-## 2. Basic Device Configuration (All Devices)
-
-1. **Set Hostname** (e.g., `R1`, `S2`, etc.):
-
-    ```
     en
-    #config t
-    (config)# hostname R1
-    ```
+    config t
+    host R2
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-3
+    no shut
 
-2. **Disable DNS Lookup** so the device does not attempt to resolve unknown commands:
+R3
+    
+    en
+    config t
+    host R3
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-2
+    no shut
 
-    ```
-    (config)# no ip domain-lookup
-    ```
+R4
 
-3. **Enable Logging Synchronous** to avoid console messages interrupting your typing:
+    en
+    config t
+    host R4
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-1
+    no shut
 
-    ```
-    (config)# line con 0
-    (config-line)# logging synchronous
-    ```
+R5
 
-4. **Set an Enable Secret Password** (“Mono”) to protect privileged EXEC mode (hashed):
+    en
+    config t
+    host R5
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-2
+    no shut
 
-    ```
-    (config)# enable secret Mono
-    ```
+S1
 
----
+    en
+    config t
+    host S1
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0,g0/2-3
+    no shut
 
-## 3. Interface Configuration & CDP Verification
+S2
 
-1. **Enable Interfaces & Add Descriptions**:
+    en
+    config t
+    host S2
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-3
+    no shut
 
-   ```
-    #config t
-    (config)# interface range gigabitEthernet[numberoftheints]
-    (config-if-range)# description Link to R2
-    (config-if-range)# no shutdown
-    ```
+S3
 
-3. **Verify CDP Neighbors**:
+    en
+    config t
+    host S3
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-3,g1/0,g3/0
+    no shut
 
-    ```
-    #show cdp neighbors
-    ```
+S4
 
-This ensures each device sees its directly connected Cisco neighbors.
+    en
+    config t
+    host S4
+    no ip domain-lookup
+    line con 0
+    logging synchronous
+    ena secret ultracat
+    int range g0/0-2,g1/0,g3/0
+    no shut
 
----
+-  Verifying Connectivity with CDP
+Once the initial configurations are complete on all relevant devices, use the Cisco Discovery Protocol (CDP) to confirm direct network adjacencies. Execute the following command on Switch-2, R5, and R4 from privileged EXEC mode:
 
-## 4. Telnet Configuration (R1 & R3)
+    show cdp nei
 
-Allow inbound Telnet connections with a simple password (`cisco`), then require login:
 
-      ```
-      (config)# line vty 0 
-      (config-line)# transport input telnet 
-      (config-line)# password cisco
-      (config-line)# login
+## 3. Configuring Telnet on R1 and R3 (to allow inbound Telnet connections on routers R1 and R3, authenticated by the password "cisco")
+
+R1 and R3
+
+    en
+    config t
+    line vty 0 924
+    transport input telnet
+    password cisco
+    login
  
 > **Note:** Telnet is **unsecured** (clear text). Generally, use SSH if security is a concern. Complex passwords are required in the real enviroment!!!
 
----
+## 4. Configuring SSH (Version 2) on R2 and R5
 
-## 5. SSH Configuration (R2 & R5)
+R2 and R5
 
-Devices R2 and R5 should allow **secure** (encrypted) SSH connections:
-
-    ```
     en
-    #config t
-    (config)# hostname R2          ! Or R5, depending on device
-    (config)# ip domain-name mono.com
-    (config)# crypto key generate rsa modulus 2048
-    (config)# ip ssh version 2
-    (config)# username admin privilege 15 secret mono
-    
-    (config)# line vty 0
-    (config-line)# transport input ssh
-    (config-line)# login local
+    config t
+    ip domain-name ultracat.com
+    crypto key generate rsa modulus 2048
+    ip ssh version 2
+    username admin privilege 15 secret ultracat
+    line vty 0 924
+    transport input ssh
+    login local
 
+Brief explation:
+- **Hostname & Domain Name** are often required (especially on older IOS) to generate RSA keys.
+- **RSA Key** creation allows SSH encryption.
+- **Local User** with privilege 15 provides administrative access via SSH.
+- **VTY Line** restricted to SSH and local login ensures secure remote access.
 
-1. **Hostname & Domain Name** are often required (especially on older IOS) to generate RSA keys.  
-2. **RSA Key** creation allows SSH encryption.  
-3. **Local User** with privilege 15 provides administrative access via SSH.  
-4. **VTY Line** restricted to SSH and local login ensures secure remote access.
-
----
-
-## 6. VLSM IP Addressing Scheme
+## 5. VLSM IP Addressing Scheme and Applying IP Addresses on Router Interfaces
 
 ### Requirements
 
@@ -133,7 +185,7 @@ Devices R2 and R5 should allow **secure** (encrypted) SSH connections:
   | F       | 30            |
 
 - **VLSM**: Use the minimal number of host bits for each subnet to conserve address space.
-- **Router Interfaces**: Typically use the **first usable** IP in each subnet.
+- **Router Interfaces**: Typically use the **first usable** IP in each subnet (from A to D).
 
 ### Example: Allocating Subnets (Largest-First)
 
@@ -149,91 +201,61 @@ Devices R2 and R5 should allow **secure** (encrypted) SSH connections:
 | **D**   | 11            | `/28`         | 180.50.0.208/28     | 180.50.0.209 – 180.50.0.222    | 180.50.0.223    |
 | **C**   | 6             | `/29`         | 180.50.0.224/29     | 180.50.0.225 – 180.50.0.230    | 180.50.0.231    |
 
----
 
-## 7. Applying IP Addresses on Router Interfaces
+R1
+    
+    config t
+    int g0/2
+    ip add 180.50.0.1 255.255.255.128
 
-- **Routers connecting segments A–D**: Assign first usable IP (e.g., `180.50.0.1`) with the correct mask:
+    int g0/0
+    ip add 180.50.0.194 255.255.255.240
+    
+    intg0/1
+    ip add 180.50.0.210 255.255.255.240
 
-    ```
-    R1(config)# interface gig0/0
-    R1(config-if)# ip address 180.50.0.1 255.255.255.128
-    R1(config-if)# no shutdown
-    ```
+R2
 
-- **R3, R4, R5**: Use the IP addresses and masks per the diagram or VLSM plan above.  
+    config t
+    int g0/3
+    ip add 180.50.0.2 255.255.255.128
+    
+    int g0/0
+    ip add 180.50.0.193 255.255.255.240
+    
+    int g0/1
+    ip add 180.50.0.225 255.255.255.248
+
+    int g0/2
+    ip add 180.50.0.209 255.255.255.240
+
+- **R3, R4, R5**: Use the IP addresses and masks in the diagram.
 - **R3 Gig0/2** (Segments E & F): Not addressed yet in this lab per instructions.
-
----
 
 ## 8. Verification Tests
 
 1. **Telnet** from R2 to R1:
 
     ```
-    R2# telnet 180.50.X.X
+    R2# telnet 180.50.0.194
     ```
 
 2. **Telnet** from R4 to R3:
 
     ```
-    R4# telnet 180.50.Y.Y
+    R4# telnet 20.1.34.3
     ```
 
 3. **SSH** from R1 to R2:
 
     ```
-    R1# ssh -l admin 180.50.Z.Z
+    R1# ssh -l admin 180.50.0.193
     ```
 
 4. **SSH** from R4 to R5:
 
     ```
-    R4# ssh -l admin 180.50.W.W
+    R4# ssh -l admin 20.1.45.5
     ```
 
-Each test confirms both **IP connectivity** and **remote access** configurations (Telnet/SSH).
-
----
-
-## 9. FAQ: Subnet Reordering
-
-### 9.1 Why Allocate from Largest to Smallest?
-
-- **Less Fragmentation**: Ensures the largest subnet has enough contiguous space.
-- **Avoid Address Exhaustion**: Placing a large subnet later might not fit if you’ve already consumed blocks with smaller subnets.
-- **Easier Future Growth**: Large subnets often need more headroom.
-
-### 9.2 Is It Compulsory?
-
-- **Not strictly.** You can allocate in any order if you have plenty of space.
-- **Largest-first** is a best practice to prevent potential design pitfalls in more constrained networks.
-
----
-
-## 10. Example: Alphabetical Order (A–F) Without Reordering
-
-If you choose to allocate subnets strictly in alphabetical order (Segments A, B, C, D, E, F), a possible layout might be:
-
-| Segment | Required Hosts | Subnet             | Mask                | Range                            | Broadcast        |
-|---------|---------------|---------------------|---------------------|----------------------------------|------------------|
-| **A**   | 99            | 180.50.0.0/25      | 255.255.255.128     | 180.50.0.1 – 180.50.0.126        | 180.50.0.127     |
-| **B**   | 13            | 180.50.0.128/28    | 255.255.255.240     | 180.50.0.129 – 180.50.0.142      | 180.50.0.143     |
-| **C**   | 6             | 180.50.0.144/29    | 255.255.255.248     | 180.50.0.145 – 180.50.0.150      | 180.50.0.151     |
-| **D**   | 11            | 180.50.0.152/28    | 255.255.255.240     | 180.50.0.153 – 180.50.0.166      | 180.50.0.167     |
-| **E**   | 26            | 180.50.0.168/27    | 255.255.255.224     | 180.50.0.169 – 180.50.0.198      | 180.50.0.199     |
-| **F**   | 30            | 180.50.0.200/27    | 255.255.255.224     | 180.50.0.201 – 180.50.0.230      | 180.50.0.231     |
-
-This works fine if you have enough space. The **largest-first** approach simply helps when address space might become tight.
-
----
-
-## Conclusion
-
-1. **Factory-Default & Basic Setup**: Ensures consistent starting points and good practices (e.g., no DNS lookup, logging synchronous).  
-2. **Telnet & SSH Configuration**: Demonstrates both unsecure (Telnet) and secure (SSH) remote management setups.  
-3. **VLSM**: Shows how to optimize subnetting by assigning the fewest host bits necessary.  
-4. **Subnet Allocation Order**: Largest-first vs. alphabetical—both valid, with largest-first recommended to avoid fragmentation.  
-5. **Verification**: Telnet/SSH tests confirm IP addressing and authentication configurations.
-
-By following these steps, you establish a solid understanding of **Cisco IOS fundamentals** and **VLSM subnetting** techniques.
+Each test confirms both **IP connectivity** and **remote access** configurations (Telnet/SSH). All worked!
