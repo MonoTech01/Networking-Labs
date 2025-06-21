@@ -232,7 +232,7 @@ R2
 - **R3, R4, R5**: Use the IP addresses and masks in the diagram.
 - **R3 Gig0/2** (Segments E & F): Not addressed yet in this lab per instructions.
 
-## 8. Verification Tests
+## 8. Verification
 
 1. **Telnet** from R2 to R1:
 
